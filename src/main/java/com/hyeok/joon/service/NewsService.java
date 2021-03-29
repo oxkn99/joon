@@ -1,10 +1,13 @@
 package com.hyeok.joon.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
+import com.hyeok.joon.vo.HomeWork;
 import com.hyeok.joon.vo.NewsVO;
 
 @Service
@@ -42,4 +45,27 @@ public class NewsService implements NewsServiceImpl{
 
         return mainNews;
     }
+
+	@Override
+	public List<HomeWork> getHomeWorkList() {
+		List<HomeWork> homeWorkList = new ArrayList<>();
+		Map<String,Boolean> listMap = new HashMap<>();
+		listMap.put("EC2 시작하기",true);
+		listMap.put("EC2 적용 목록",false);
+		listMap.put("SpringBoot",true);
+		listMap.put("JSP ",true);
+		listMap.put("MyBatis",false);
+		listMap.put("Lombok",true);
+		listMap.put("Mysql",false);
+		listMap.put("EC2 Linux 환경에서 SpringBoot 적용",false);
+		listMap.put("EC2 Linux 환경에서 Mysql 설치",false);
+		listMap.put("배포하기♡",false);
+		listMap.forEach((key,value)->{
+			HomeWork item = new HomeWork();
+			item.setTitle(key);
+			item.setCheck(value);
+			homeWorkList.add(item);
+		});
+		return homeWorkList;
+	}
 }

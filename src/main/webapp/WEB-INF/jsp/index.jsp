@@ -1,24 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Trick&Basic News</title>
-    </head>
-    <body>
-    
-    <div class="header" style="width:100%;height:100px;line-height:100px;border-bottom:1px solid #d0d0d0">Trick&Basic News</div>
-    
-    <div class="news-container">
-        <c:forEach var="el" items="${newsData}">
-            <div class="news" style="margin-bottom:20px;">
-                ${el.title}<br>
-                ${el.type} / ${el.author} / ${el.date}<br>
-                ${el.contents}
-            </div>
-        </c:forEach>
-    </div>
-    
-    </body>
+<head>
+<meta charset="UTF-8">
+<title>ROOT</title>
+</head>
+<body>
+	<h1>HomeWork</h1>
+	<div id=homework_List>
+        <c:forEach items="${workList}" var="entry">
+        <c:choose>
+    <c:when test="${entry.check eq true}">
+    <input type="checkbox"  checked="checked" onclick="return false;"/>
+    ${entry.title} <br/>
+    </c:when>
+    <c:otherwise>
+    <input type="checkbox"  onclick="return false;"/>
+    ${entry.title} <br/>
+    </c:otherwise>
+		</c:choose>
+		</c:forEach>
+
+	</div>
+</body>
 </html>

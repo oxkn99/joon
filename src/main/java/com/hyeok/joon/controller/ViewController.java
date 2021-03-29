@@ -12,8 +12,12 @@ public class ViewController {
     NewsServiceImpl mainNewsService;
     @RequestMapping("/")
     public String index(Model model) {
-
-        model.addAttribute("newsData",mainNewsService.getNews());
+    	model.addAttribute("workList",mainNewsService.getHomeWorkList());
         return "index";
+    }
+    @RequestMapping("/about")
+    public String about(Model model) {
+        model.addAttribute("newsData",mainNewsService.getNews());
+        return "about";
     }
 }
