@@ -6,7 +6,6 @@ pageEncoding="UTF-8"%>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-<h1>웹슈터</h1>
-<img alt="쏘기전" src="/img/ready.jpg" onClick="this.src = '/img/push.jpg'" ondblclick="this.src = '/img/ready.jpg'" >
+<h1>메인인듯합니다.</h1>
 </body>
 </html>
