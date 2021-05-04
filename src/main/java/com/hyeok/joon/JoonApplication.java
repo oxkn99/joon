@@ -16,5 +16,5 @@ public class JoonApplication extends SpringBootServletInitializer{
 	public static void main(String[] args) {
 		SpringApplication.run(JoonApplication.class, args);
 	}
-
+    //test
 }
