@@ -18,3 +18,4 @@ public class JoonApplication extends SpringBootServletInitializer{
 	}
     //test
 }
+//안녕하세요
