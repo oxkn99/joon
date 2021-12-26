@@ -14,5 +14,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .oauth2Login();  
+        //안녕하세용
     }
 }
